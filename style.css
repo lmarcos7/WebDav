@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Tahoma !important;
+    overflow: auto;
+    /* overflow: hidden; no estaba */ 
+
+    /* background-color: #f9c280;
+    background-image: linear-gradient(180deg, #f9c280 0%, var(--pn_orange_Galp) 100%); */
+}
+.header{
+    background-color: #1867B7;
+    background-position: left top;
+    background-image: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-spacing: 0;
+    white-space: nowrap;
+    line-height: normal;
+}
+.bodyPart {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.headerLeftRegion {
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 48px;
+    height: 100%;
+    width: 200%;
+    display: flex;
+}
+/* .buttonMenuLeftRegion {
+    height: 100%;
+    line-height: 48px;
+    display: flex;
+} */
+.headerCenterRegion {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+}
+.headerRightRegion {
+    height: 100%;
+    line-height: 48px;
+    display: flex;
+}
+.topBar{
+    background-color: var(--pn-theme-internal_160) ; 
+    border-bottom: 1px solid #edebe9;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 0px 14px 0px 24px;
+    height: 44px;
+}
+
+.topBarLeft {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  align-items: stretch;
+}
+.topBarRight{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: stretch;
+}
+.buttonContainer {
+  flex-shrink: 0;
+  display: inherit;
+}
+.buttonStyle{
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: medium none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    min-width: 40px;
+    background-color: transparent;
+    color:#000000;
+    height: 100%;
+    margin: 0px 8px;
+    user-select: none;
+}
+
+
+.buttonStyleX{
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(0, 120, 212);
+    margin: 0 0 0 8px;
+    box-sizing: content-box;
+    border: none;
+    margin: 5px 8px 5px 8px;
+    font: normal normal 14px "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", "Roboto", "Helvetica Neue";
+}
+
+
+.secondBar{
+    padding: 20px 20px 20px 20px;
+}
+
+.items{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tableSpace{
+    position: relative;
+    cursor: default;
+}
+
+#container {
+    background-color: var(--pn-theme-internal_200);
+    border-radius: 24px;
+    /* display: grid; */
+    place-items: center;
+    width: 80%;
+    padding: 24px;
+    min-height: 80%;
+    margin: 20px auto 20px auto;     
+}
+
+.content{
+    margin: 15px 0 15px 0;
+    place-items: center;
+}
+
+form{
+    width: 100%;
+}
+
+fieldset
+{
+  border-color:var(--pn-theme_80) ;
+  border-radius: 6px;
+
+}
+
+.table{
+	display: table;
+	width: 100%;
+    margin: 25px 0px 25px 0px;
+    place-items: center;
+    border-spacing: 0; 
+}
+
+.tableBody {
+	display: table-row-group;
+}
+
+.tableRowHeader {
+	display: table-row;
+    font-weight: 400;
+    line-height: 1.385;
+    /* height: 30px; */
+    text-align: left;
+    font-family: Nunito-Bold,"Open Sans Regular",Arial,Helvetica,sans-serif;
+}
+.checkboxAll{
+    width: fit-content;
+    white-space:nowrap;
+}
+
+.tableRowHeader > .tableCell {
+    border: 0px;  
+}	
+
+.tableRow {    /*Contenido de las filas*/
+    display: table-row;
+    text-align: left; 
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.tableCell, .tableHead{
+    border-bottom: 1px solid var(--pn-theme-internal_80);  
+	display: table-cell;	
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+  
+}
+.buttonCell{
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+}
+
+.name, .contentType, .brand, .status {
+    width: auto;
+    padding-left: 4px;
+}
+
+.iconoColor{
+    /* filter: opacity(0.4) drop-shadow(0 0 0 red); no borrar */
+    filter: invert(100%);
+    vertical-align: middle;
+}
+
+.text{
+    text-align:center;
+}
+
+#modal{
+    text-align:center;
+
+}
+
+
+/* .breadcrumb {
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(100deg, #0f72bd, #2e90dc);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3), 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    text-align: center;
+    color: #FFF;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+} */
+
+
+.breadCrumb{
+    flex-direction: row;
+    letter-spacing: 0.149em;
+    padding-bottom: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-radius: 6px 6px 0 0;
+    border-color: var(--pn-theme-internal_180);
+    margin-right: 5px;
+    color:var(--pn-theme-internal_180);
+}
+
+.breadCrumb:last-of-type{
+    background-color: var(--pn-theme_80);
+    color:var(--pn-theme-internal_10);
+    border-color: var(--pn-theme_80);
+}
+
+.breadCrumb > a{
+    display: -webkit-inline-box;
+    color: inherit;
+    height: 30px;
+}
+.breadCrumb:hover{
+    cursor: pointer;
+    background-color: var(--pn-theme_20);
+    color: var(--pn-theme_50);
+    font-weight: bold;
+    border-color: var(--pn-theme_50);
+}
+
+.folderName{
+  font-size: 13px;
+  font: normal normal 13px 'Open Sans', Arial;
+  margin: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+
+.drop-zone{
+    width:100%;
+    height:150px;
+    background-color: var( --pn-theme_10);
+    display: grid;
+    place-content: center;
+    border-radius: 6px;
+    font-style: italic
+}
+
+
+.drop-zone.drag-over {
+    background: var(--pn-theme_90);
+    color: #ffffff;
+}
+
+
+.buttonSubmit {
+
+
+    /* border-radius: 21px;
+    display: inline-block;
+    font-size: 1.167em;
+    line-height: 1.286;
+    text-decoration: none;
+    transition: opacity .3s ease 0s;
+    position: relative;
+    text-align: center;
+    text-size-adjust: auto;  */
+
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(0, 120, 212);
+    margin: 0 0 0 8px;
+    box-sizing: content-box;
+    border: none;
+    margin: 5px 8px 5px 8px;
+    font: normal normal 14px "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", "Roboto", "Helvetica Neue",;
+}
+
+.disposeButton{
+    /* width: fit-content; */
+    background-color: var(--pn-theme-internal_10);
+    margin: 0 0 0 8px;
+    padding: 2px;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--pn-theme-internal_90);  
+    border-color: var(--pn-theme-internal_80);
+    border-radius: 6px;
+}
+
+.disposeButton:hover {
+    cursor: pointer;
+    /* background-color: var(--pn-theme_80); */
+    /* border-color: var(--pn-theme_80); */
+    background-color: var(--pn-theme-internal_100);
+}
+.buttonSubmit:hover{
+    cursor: pointer;
+    background-color: var(--pn-theme_50);
+}
+
+/* input, button {
+  width : 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  border-color: var(--pn-theme_80);
+} */
+
+
+a { 
+    text-decoration: none; 
+    /* color: black; */
+} 
+
+
+
+
+
+
+
+:root {
+    --pn_orange_Galp: #fa551e;
+    --pn_orange_dark: #c83504;
+    --pn-theme_5: hsla(15, 85%, 40%, 0.03);
+    --pn-theme_10:   #e1dfdd;
+    /* --pn-theme_10: hsla(15, 85%, 40%, 0.07); */
+    --pn-theme_20:  rgba(77, 144, 212, 0.342); /*cambiar de color*/
+    --pn-theme_30: hsla(15,96%, 50%, 1);
+    --pn-theme_40: hsla(15,57.599999999999994%, 90%, 1);
+    --pn-theme_50: rgb(14, 82, 150);
+    --pn-theme_55: hsla(15,96%, 55%, 1);
+    --pn-theme_60: hsla(15,96%, 55%, 1);
+    --pn-theme_70: hsla(15,96%, 40%, 1);
+    --pn-theme_80: #1867B7;
+     /* --pn-theme_80: hsla(15,96%, 55%, 1); */
+    --pn-theme_90: #f4901b;
+    --pn-theme_91: hsla(32,91%, 53%, 0.16);
+    --pn-theme_100: hsla(15,57.599999999999994%, 96%, 1);
+    --pn-theme_110: hsla(15,72.96000000000001%, 38%, 1);
+    --pn-theme_120: hsla(15,57.599999999999994%, 96%, 0.7);
+    --pn-theme_130: #333333;
+    --pn-theme_focusOutlineColor: hsla(15,96%, 80%, 1);
+    --pn-theme-internal_10: #ffffff;
+    --pn-theme-internal_60: #f6f6f6;
+    --pn-theme-internal_70: #ececec;
+    --pn-theme-internal_80: #d8d8d8;
+    --pn-theme-internal_100: #dbe0e3;
+    --pn-theme-internal_110: #636363;
+    --pn-theme-internal_120: #3f4751;
+    --pn-theme-internal_121: #2A2C30;
+    --pn-theme-internal_130: #ececec;
+    --pn-theme-internal_140: #636363;
+    --pn-theme-internal_150: #fafafb;
+    --pn-theme-internal_160: #ececec;
+    --pn-theme-internal_170: rgba(247, 250, 253, 0.6);
+    --pn-theme-internal_180: #c2c2c2;
+    --pn-theme-internal_190: #ececec;
+    --pn-theme-internal_200: #ffffff;
+ 
+}
+
+
+
+
+
+

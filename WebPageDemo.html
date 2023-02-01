@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<wicket:head>
+		<title>Webpage Demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />	
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script> -->
+         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
+ 
+
+	</wicket:head>
+	<body> 
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+        
+        
+
+        <script>
+            
+            $(function(){
+                $( "#modal").dialog({
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    show:{
+                        effect: "blind",
+                        duration: 500
+                    },
+                    hide:{
+                        effect: "explode",
+                        duration: 600
+                    }
+
+                });
+
+                $("#btn-open").on("click",function(){
+                    $("#modal").dialog("open");
+                });
+            });
+                           
+            </script>
+
+
+        <div class="header" role="banner" style="height: 48px; line-height: 48px;">
+            <div id="HeaderLeftRegion" class="headerLeftRegion"> 
+                <wicket:link>
+                  <img src="../demo/icons/logoPlanon.png"  style="max-width: 150%; max-height:100%; margin: 10px;" >                      
+                </wicket:link>
+                <!-- <div class="buttonMenuLeftRegion">
+                </div> -->
+                                
+	        </div>
+            <div id="HeaderCenterRegion" class="headerCenterRegion" style="width: calc(100% - 116px);">
+            </div>   
+            <div id="HeaderRightRegion" class="headerRightRegion" style="width: calc(100% - 116px);">
+            </div>   
+        </div> 
+        <div class="bodyPart">
+            <div wicket:id="menu">
+                <div class="topBar" role="banner" style="height: 48px; line-height: 48px;">
+                    <div id="HeaderLeftRegion" class="topBarLeft">
+                        <div class="buttonContainer">
+
+                            <div class="buttonCell">
+                                <div style="display:flex; place-content: center;">
+                                    <!-- <form wicket:id="formCreateFolder"> -->
+                                            <div id="modal" title="Create a new folder">
+                                                <form wicket:id="formCreateFolder" type="text">
+                                                    <span><b>Folder name</b></span>
+                                                    <input type="text" wicket:id="text" class="text"/>
+                                                    <input type="submit" value="Accept" wicket:id="newFolderButton" class="buttonSubmit"/>
+                                                </form>
+                                            </div>
+                                            <button class="buttonStyleX" id="btn-open">  <!-- wicket:id="newFolderButton"-->
+                                                <wicket:link>
+                                                    <img class="iconoColor" title = "New_folder" alt="New_folder" src="../demo/icons/add.png"  width="25" height="25" >
+                                                    <span>New folder</span>
+                                                </wicket:link>  
+                                            </button>
+                                    <!-- </form>  -->
+                                </div>
+                                <div style="display:flex; place-content: center;">
+                                    <button  class="buttonStyleX">   <!--wicket:id="uploadButton"-->
+                                        <wicket:link>
+                                            <img class="iconoColor" title = "Upload" alt="Upload" src="../demo/icons/upload.png"  width="25" height="25" >
+                                            <span>Upload</span>
+                                        </wicket:link>
+                                    </button> 
+                                </div>
+
+                                <div style="display:flex; place-content: center;">                                   
+                                        <button class="buttonSubmit">  <!--wicket:id="downloadButton"-->                                    
+                                            <wicket:link>
+                                                <img class="iconoColor" title = "Download" alt="Download" src="../demo/icons/download.png"  width="25" height="25" >
+                                                <span>Download</span>
+                                            </wicket:link>
+                                        </button>
+                                </div>
+                                
+                                <div style="display:flex; place-content: center;">
+                                    <button class="buttonStyleX"> 
+                                        <wicket:link>
+                                            <img class="iconoColor" title = "Delete" alt="Delete" src="../demo/icons/bin.png"  width="25" height="25" >
+                                            <span>Delete</span>
+                                        </wicket:link>
+                                </button>
+                                </div>
+                            </div>
+                        </div>                 
+                    </div>
+
+                    <div id="HeaderCenterRegion" class="topBarRight" style="width: calc(100% - 116px);">
+                        
+                    </div>     
+            </div>  
+            </div>
+             
+
+            <div class="items">
+                <div class="tableSpace">
+                    <div wicket:id="container" id="container">            
+                        <div id="content" class="content">
+                            <div class="content">
+                                <form wicket:id="form" enctype="multipart/form-data">
+                                    <fieldset>
+                                        <p>
+                                            <label>Select file :</label> 
+                                            <input wicket:id ="fileUpload" type="file" multiple/>
+                                            <input  wicket:id="buttonSubmit" type="submit" value="Upload" class="buttonSubmit"/>
+                                            <div wicket:id="drop" class="drop-zone" >Drop your files here</div>
+                                        </p>
+                                    </fieldset>
+                                </form>  
+                            </div>
+                            <div class="secondBar">
+                                <span class="breadCrumb" wicket:id="breadcrumbList" > 
+                                    <wicket:link>
+                                            <a wicket:id="breadcrumbLinkSelect">
+                                                <span wicket:id="spanLabel" class="folderName">Text that will be replaced.</span>
+                                            </a>
+                                    </wicket:link>
+                                </span>
+                            </div>
+
+                           
+
+                            <form wicket:id="form2"> 
+                                <div style="display:flex; place-content: center;">
+                                    <div class="buttonStyleX">
+                                        <input type="submit" wicket:id="submitDownload" value="Download" class="buttonSubmit"/>
+                                        <wicket:link>
+                                            <img class="iconoColor"alt="Download" src="../demo/icons/download.png"  width="25" height="25" >
+                                        </wicket:link>
+                                    </div>
+                                </div>
+                                <span wicket:id="group" id="group">
+                                    <!-- <input type="submit" value="submit"/>       -->
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="tableRowHeader"> 
+                                                <th scope="col" class="tableCell">                                                 
+                                                    <td><input type="checkbox" wicket:id="groupselector">All</input></td>
+                                                </th>
+                                                <th scope="col" class="tableCell icono"></th>
+                                                <th scope="col" class="tableCell name">Name</th>
+                                                <th scope="col" class="tableCell brand">Modified Date</th>
+                                                <th scope="col" class="tableCell size">Size</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tableBody">
+                                            <tr wicket:id="webDAVRess" class="tableRow"> 
+                                                <td class="tableCell checkboxAll">
+                                                    <td><input type="checkbox" wicket:id="checkbox" multiple="multiple"></input></td> 
+                                                
+                                                </td>
+                                                <td class="tableCell">
+                                                    <wicket:link>
+                                                        <a wicket:id="externalSite2">
+                                                            <img wicket:id="iconoImage" width="20" height="20"/>
+                                                        </a>
+                                                    </wicket:link>
+                                                </td>
+                                                <td class="tableCell" wicket:id="webdavObjectName"></td>
+                                                <td class="tableCell" wicket:id="webdavModifiedDate"></td>
+                                                <td class="tableCell" wicket:id="webdavSize"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </span>
+                            </form>
+                                
+                            <span wicket:id="feedback"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </body>
+</html>
